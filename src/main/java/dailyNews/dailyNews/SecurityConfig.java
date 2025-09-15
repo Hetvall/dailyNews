@@ -23,7 +23,9 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/").permitAll()
                         .anyRequest().authenticated()
-                );
+                )
+                .httpBasic(httpBasic -> {})      // permite probar con Postman
+                .formLogin(form -> form.disable()); ;
         return http.build();
     }
 }
