@@ -19,7 +19,6 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping
-@CrossOrigin(origins = "http://localhost:4200")
 public class UserController {
     private final UserRepository userRepo;
     private final BCryptPasswordEncoder passwordEncoder;
