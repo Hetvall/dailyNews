@@ -30,7 +30,7 @@ public class NewsController {
         String url = "https://newsapi.org/v2/top-headlines?category=" + category +
         "&pageSize=10&apiKey=" + newsApiKey;
         ResponseEntity<Map> response = restTemplate.getForEntity(url, Map.class);
-        return ResponseEntity.status(response.getStatusCode()).body(response.getBody())
+        return ResponseEntity.status(response.getStatusCode()).body(response.getBody());
 
     }
 }
