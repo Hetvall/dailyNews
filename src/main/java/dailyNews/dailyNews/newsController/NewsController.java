@@ -11,7 +11,7 @@ import java.util.Map;
 @RestController
 public class NewsController {
 
-    @Value("${newsApi.key}")
+    @Value("${NEWS_API_KEY.key}")
     private String newsApiKey;
 
     private final RestTemplate restTemplate = new RestTemplate();
